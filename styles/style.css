@@ -42,29 +42,27 @@ ol {
 
 .content {
   display: grid;
-  grid-template-columns: 711px 399px;
+  grid-template-columns: 711px max-content;
   gap: 30px;
   width: 1140px;
 }
 
 .content__list {
-  width: 398px;
   height: 298px;
   position: relative;
-  overflow: auto;
+  overflow-y: auto;
   padding-right: 1px;
 }
 
 .content__details {
   width: 399px;
   display: grid;
-  width: 100%;
+  grid-template-columns: min-content;
   grid-template-rows: 210px 298px;
   gap: 26px;
 }
 
 .search-form {
-  display: flex;
   display: grid;
   grid-template-columns: 225px 212px 194px;
   gap: 40px;
@@ -124,7 +122,6 @@ ol {
   flex-direction: row;
   align-items: start;
   width: 394px;
-  height: 107px;
  /* display: grid;
   grid-template-columns: 200px 199px;*/
 }
@@ -152,6 +149,7 @@ ol {
   text-overflow: ellipsis; 
   white-space: nowrap; 
   width: 200px;
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -261,7 +259,6 @@ input:focus {
   position: absolute;
   top: 6%;
   left: 6%;
-  margin: px;
   width: 15px;
   height: 15px;
   background-color: currentColor;
